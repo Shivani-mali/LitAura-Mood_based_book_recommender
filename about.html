@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LitAura - By Gen-G Developers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+
+<body class="bg-gradient-to-br from-cyan-100 via-blue-100 to-purple-100 text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-purple-700">📚 LitAura</h1>
+      <nav class="space-x-6" aria-label="Main Navigation">
+        <a href="index.html" class="hover:text-purple-600 font-medium"><i class="fa-regular fa-house fs-4"></i></a>
+        <a href="#about-litaura" class="hover:text-purple-600 font-medium"><i class="fa-solid fa-book fs-4"></i></a>
+        <a href="#team" class="hover:text-purple-600 font-medium"><i class="fa-regular fa-circle-user fs-4"></i></a>
+        <a href="#Feedback" class="hover:text-purple-600 font-medium"><i class="fa-regular fa-comment fs-4"></i></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- About Litaura Section -->
+  <section id="about-litaura" class="py-20 bg-gradient-to-b from-purple-100 to-white px-6">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-5xl font-bold text-purple-700 mb-6 text-center">📚 About LitAura</h2>
+      <p class="text-3xl font-bold text-purple-700 mb-6 text-center">"A Book Recommender"</p>
+      <p class="text-xl text-gray-700 font-medium mb-4 leading-relaxed text-justify">
+        <span class="font-semibold text-purple-800">LitAura</span> is a mood-based book recommender web app
+        that helps users discover the perfect book based on how they’re feeling.
+        It’s a creative blend of technology and emotional intelligence.
+      </p>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed text-justify">
+        By using <strong>Sentiment Analysis</strong>, LitAura understands user moods like happy, calm, or thoughtful
+        and then fetches relevant books using the <strong>Google Books API</strong>. Whether you’re seeking inspiration
+        or comfort, LitAura gives you book suggestions that connect to your emotional state.
+      </p>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed text-justify">
+        It’s not just a tool — it’s a personalized reading companion made to make book discovery smoother,
+        smarter, and more meaningful.
+      </p>
+      <div class="my-6 text-center">
+        <p class="inline-block px-4 py-2 bg-purple-200 text-purple-800 font-semibold rounded-full shadow">
+          🛠️ Built with HTML, Tailwind CSS, JavaScript, Sentiment.js & Google Books API
+        </p>
+      </div>
+      <p class="text-lg text-gray-600 text-justify">
+        From the mood you type to the books you save — every part of LitAura is designed with purpose and
+        passion. Let your mood pick your next favorite read. 💫
+      </p>
+    </div>
+  </section>
+
+  <!-- About the Team -->
+  <section id="team" class="py-16 bg-purple-50">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold text-purple-700 mb-6">👩‍💻 About the Team</h2>
+      <p class="text-lg mb-4 text-justify">
+        We are <strong>Gen-G Developers</strong> — a passionate student team dedicated to building innovative digital solutions.  
+        LitAura is one of our flagship projects where we blended creativity, technology, and a love for books.
+      </p>
+      <p class="text-lg mb-4 text-justify">
+        Our niche is <strong>AI-powered web applications</strong>. We focus on projects that combine usability with intelligence, making life simpler and smarter.  
+        LitAura reflects our mission: <em>to use technology for meaningful everyday experiences.</em>
+      </p>
+      <p class="text-lg mb-6 text-justify">
+        By collaborating, we explored new technologies, practiced teamwork, and transformed an idea into reality.  
+        This project symbolizes our belief in <strong>learning by creating</strong>.
+      </p>
+      <div class="text-center mt-10">
+        <a href="index.html" 
+           class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform transition duration-300 ease-in-out">
+          🚀 Explore Our Work
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feedback Form -->
+  <section id="Feedback" class="py-16 bg-gradient-to-r from-purple-100 to-indigo-100">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-purple-700 mb-6">📝 Give Feedback</h2>
+      <p class="text-lg text-gray-700 mb-8">We’d love your thoughts and suggestions. Please fill out the form below 👇</p>
+      <div class="rounded-xl overflow-hidden shadow-lg">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdJvW6mASMmY2BbhEVhjZ_Hh1KjHyxJ6443erPwpOrw3bWqIQ/viewform?embedded=true"
+          width="100%" height="832" style="border:0;">
+          Loading…
+        </iframe>
+        <div class="mt-6">
+          <p class="text-purple-700 font-semibold text-lg">✅ Once submitted, your response will be recorded successfully.</p>
+          <a href="index.html"
+            class="mt-3 inline-block bg-purple-600 text-white px-4 py-2 rounded hover:bg-pink-600 transition">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white text-center py-6 shadow-inner">
+    <p class="text-gray-600 text-sm">&copy; 2025 Gen-G Developers. All rights reserved.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

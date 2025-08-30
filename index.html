@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" class="transition-all duration-500">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LitAura</title>
+    <link href="output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="logo-style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+
+<style>
+    .image-container {
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .book-card {
+        margin: 15px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        padding: 10px;
+        width: 350px;
+    }
+
+    .book-card img {
+        width: 330px;
+        height: 220px;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    .loadbtn {
+        background-color: slateblue;
+        border: none;
+        padding: 10px 20px;
+        margin-left: 45%;
+        color: white;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    .book-card h3 {
+        font-size: 14px;
+        margin: 8px 0 4px;
+        color: #4B0082;
+        text-align: start;
+    }
+
+    .rounded1 {
+        border-radius: var(--bs-border-radius) !important;
+        width: 320px;
+    }
+
+
+
+
+    .bg-white1 {
+        --bs-bg-opacity: 1;
+        background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
+        margin: 20px;
+        width: 350px;
+        text-align: start;
+    }
+</style>
+
+<body
+    class="bg-gradient-to-br from-slate-900 to-gray-800 text-white min-h-screen font-sans dark:bg-white dark:text-black transition-all duration-500">
+
+    <!-- 🌐 Navbar -->
+    <!-- <nav class="bg-white text-gray-800 shadow-md px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center space-x-3">
+      <img src="img/logo.png" alt="Logo" class="logo-img" />
+      <span class="text-xl font-bold text-indigo-700">LitAura</span> -->
+    <!-- already comm<span class="text-sm text-gray-500 hidden sm:inline">Find books that vibe with your emotions</span> -->
+    <!-- </div> -->
+    <!-- <div class="flex items-center space-x-4"> -->
+    <!-- already comm<a href="index.html" class="hover:text-pink-600 font-bold">Home</a> -->
+    <!-- <a href="favorites.html" class="hover:text-pink-600 font-bold">Favorites</a>
+      <a href="about.html" class="hover:text-pink-600 font-bold">About</a>
+    </div>
+  </nav> -->
+
+    <nav class="navbar navbar-expand-lg bg-white ">
+        <div class="container-fluid">
+            <img src="img/logo.png" width="100px" height="100px">
+            <a class="navbar-brand fs-1 ms-3 fw-bold" style="color: #4B0082;" href="#">LitAura</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 w-100 justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold fs-5" style="color: #4B0082;" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold fs-5" style="color: #4B0082;" href="fav.html">Favorites</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold fs-5" style="color: #4B0082;" href="about.html">Abouts</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- 🔎 Search Section -->
+    <div class="max-w-5xl mx-auto text-center  px-4">
+        <h1 class="text-4xl font-bold text-pink-400 mb-4">LitAura 📚</h1>
+        <p class="text-xl sm:text-2xl text-gray-300 mb-8">Search books by emotion, genre, or keyword</p>
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-10 mt-5">
+            <input id="searchInput" type="text" placeholder="Search for books..."
+                class="w-64 px-4 py-2 rounded-full bg-white text-black shadow dark:bg-gray-100" />
+
+            <select id="genreSelect" class="px-4 py-2 rounded-full bg-white text-black shadow dark:bg-gray-100">
+                <option value>All Genres</option>
+                <option value="fiction">Fiction</option>
+                <option value="romance">Romance</option>
+                <option value="science">Science</option>
+                <option value="history">History</option>
+            </select>
+
+            <select id="emotionSelect" class="px-4 py-2 rounded-full bg-white text-black shadow dark:bg-gray-100">
+                <option value>Any Emotion</option>
+                <option value="happy">Happy 😊</option>
+                <option value="sad">Sad 😢</option>
+                <option value="motivated">Motivated 🔥</option>
+                <option value="romantic">Romantic 💖</option>
+            </select>
+
+            <button id="searchBtn" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-full shadow">
+                Search
+            </button>
+        </div>
+    </div>
+
+    <!-- 📚 Scrollable Book Results -->
+    <div class="max-w-6xl mx-auto px-4 ">
+        <div id="results"
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 overflow-y-auto max-h-[60vh] pr-2">
+            <!-- JS will inject book cards here -->
+        </div>
+    </div>
+
+    <button class="loadbtn">Load More</button>
+
+    <div class="image-container"></div>
+    <!-- <button class="btn">Load More</button> -->
+
+    <script>
+        const imageContainerEl = document.querySelector(".image-container");
+        const btnEl = document.querySelector(".loadbtn");
+
+        // Keep favorites in localStorage
+        let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+        // Fetch and display books on first load
+        fetchRandomBooks();
+
+        btnEl.addEventListener("click", () => {
+            fetchRandomBooks();
+        });
+
+        async function fetchRandomBooks() {
+            const res = await fetch(
+                "https://www.googleapis.com/books/v1/volumes?q=subject:fiction&maxResults=6&startIndex=" +
+                Math.floor(Math.random() * 100)
+            );
+            const data = await res.json();
+
+            imageContainerEl.innerHTML = ""; // clear old books
+
+            data.items.forEach((book) => {
+                const info = book.volumeInfo;
+
+                // Create book card (Tailwind style same as second script)
+                const bookDiv = document.createElement("div");
+                bookDiv.className =
+                    "bg-white1 dark:bg-gray-900 text-gray-900 dark:text-white rounded-lg overflow-hidden shadow p-4 w-72";
+
+                const img = document.createElement("img");
+                img.src = info.imageLinks
+                    ? info.imageLinks.thumbnail
+                    : "https://via.placeholder.com/150x220?text=No+Image";
+                img.className = "w-full h-48 object-cover mb-3 rounded1";
+
+                const title = document.createElement("h3");
+                title.textContent = info.title;
+                title.className = "font-bold text-lg";
+
+                const author = document.createElement("p");
+                author.textContent = info.authors
+                    ? info.authors.join(", ")
+                    : "Unknown Author";
+                author.className = "mb-1";
+
+                // 📌 Preview Link
+                const preview = document.createElement("a");
+                preview.href = info.previewLink || "#";
+                preview.target = "_blank";
+                preview.textContent = "Preview";
+                preview.className =
+                    "text-blue-500 underline text-sm block mt-2 hover:text-blue-700";
+
+                // 📌 Save Button
+                const saveBtn = document.createElement("button");
+                saveBtn.textContent = "❤ Save";
+                saveBtn.className =
+                    "mt-2 bg-pink-500 text-white px-3 py-1 rounded text-sm hover:bg-pink-600";
+
+                saveBtn.addEventListener("click", () => {
+                    addToFavorites({
+                        id: book.id,
+                        title: info.title,
+                        authors: info.authors,
+                        img: img.src,
+                        preview: info.previewLink,
+                    });
+                });
+
+                // Append all to card
+                bookDiv.appendChild(img);
+                bookDiv.appendChild(title);
+                bookDiv.appendChild(author);
+                bookDiv.appendChild(preview);
+                bookDiv.appendChild(saveBtn);
+
+                imageContainerEl.appendChild(bookDiv);
+            });
+        }
+
+        function addToFavorites(book) {
+            if (!favorites.some((b) => b.id === book.id)) {
+                favorites.push(book);
+                localStorage.setItem("favorites", JSON.stringify(favorites));
+                alert("Book saved to favorites!");
+            } else {
+                alert("Already in favorites!");
+            }
+        }
+    </script>
+
+
+
+    <!-- 📜 Script -->
+    <script src="src/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/08/28/16/20250828160635-1X4ZD3QX.js" defer></script>
+
+    
+<style>
+  .chatbot-caption {
+    position: fixed;
+    bottom: 95px;
+    right: 2px;
+    background: white;
+    color: #4B0082;
+    padding: 8px 14px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    z-index: 9999;
+    display: flex; /* 🚀 Show at first */
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    animation: floaty 3s ease-in-out infinite;
+  }
+
+  .chatbot-caption::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    right: 18px;
+    width: 12px;
+    height: 12px;
+    background: white;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
+  @keyframes floaty {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+  }
+</style>
+
+<div id="chatCaption" class="chatbot-caption">💬 Ask me anything!</div>
+
+<script>
+  const caption = document.getElementById("chatCaption");
+
+  // ⏳ Hide caption after 20 seconds
+  setTimeout(() => {
+    caption.style.display = "none";
+  }, 20000);
+
+  // ♻️ Repeat: show every 5 minutes, stay for 20s
+  setInterval(() => {
+    caption.style.display = "flex";
+    setTimeout(() => {
+      caption.style.display = "none";
+    }, 20000);
+  }, 5 * 60 * 1000); // 5 minutes = 300,000 ms
+
+  // When caption is clicked → open chatbot
+  caption.addEventListener("click", () => {
+    window.botpressWebChat.sendEvent({ type: "show" });
+    caption.style.display = "none"; // hide immediately when clicked
+  });
+</script>
+
+
+
+</body>
+
+</html>

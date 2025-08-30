@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Favorites | LitAura</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="output.css" rel="stylesheet" />
+  <link rel="stylesheet" href="logo-style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+</head>
+
+<body class="bg-gradient-to-br from-slate-900 to-gray-800 text-white min-h-screen font-sans p-4">
+
+  <!-- 🔗 Navbar -->
+  <nav class="bg-white text-gray-800 shadow-md px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center space-x-3">
+      <img src="img/logo.png" alt="LitAura logo" class="logo-img" />
+      <span class="text-xl font-bold text-indigo-700">SAVE</span>
+      <!-- <span class="text-sm text-gray-500 hidden sm:inline">Save your favorite books here!</span> -->
+    </div>
+    <div class="flex items-center space-x-4">
+      <a href="index.html" class="hover:text-pink-600 font-bold">Home</a>
+      <a href="about.html" class="hover:text-pink-600 font-bold">About</a>
+    </div>
+  </nav>
+
+  <!-- ❤ Favorites Section -->
+  <div class="max-w-6xl mx-auto mt-10">
+    <h1 class="text-4xl sm:text-5xl font-extrabold text-center text-pink-400 mb-8 flex justify-center items-center gap-3 mt-3">
+      <img src="https://img.icons8.com/emoji/48/books-emoji.png" alt="Books" class="w-8 h-8 " />
+      Your Favorite Books
+    </h1>
+
+    <div id="favorites" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-5">
+      <!-- JavaScript will inject saved books here -->
+    </div>
+
+    <!-- ❌ Clear All Button -->
+    <div class="text-center mt-10">
+      <button onclick="clearFavorites()" class="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-full shadow transition mt-3">
+        Clear All Favorites ❌
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const favoritesContainer = document.getElementById("favorites");
+    const saved = JSON.parse(localStorage.getItem("favorites")) || [];
+
+    function renderFavorites() {
+      favoritesContainer.innerHTML = "";
+
+      if (saved.length === 0) {
+        favoritesContainer.innerHTML = `
+          <div class="text-center col-span-3">
+            <p class="text-gray-300 text-lg mb-2">No favorites saved yet. 💔</p>
+            <p class="text-sm text-gray-400">Go back to <a href="index.html" class="text-pink-400 underline hover:text-pink-300">Home</a> and start adding some!</p>
+          </div>`;
+        return;
+      }
+
+      saved.forEach((book) => {
+        const card = document.createElement("div");
+        card.className =
+          "bg-white text-gray-900 rounded-lg overflow-hidden shadow p-4 transition hover:scale-105 duration-200";
+
+        card.innerHTML = `
+          <img src="${book.thumbnail}" alt="${book.title}" class="w-full h-48 object-cover mb-2 rounded" />
+          <h3 class="font-bold text-lg">${book.title}</h3>
+          <p class="text-sm mb-2">${book.authors}</p>
+          <a href="${book.previewLink}" target="_blank" class="text-blue-600 text-sm underline">Preview</a>
+        `;
+
+        favoritesContainer.appendChild(card);
+      });
+    }
+
+    function clearFavorites() {
+      localStorage.removeItem("favorites");
+      renderFavorites();
+    }
+
+    renderFavorites();
+  </script>
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+</html>

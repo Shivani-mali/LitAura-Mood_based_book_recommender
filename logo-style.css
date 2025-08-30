@@ -1,0 +1,17 @@
+/* logo-style.css */
+
+.logo-img {
+  height: 120px;
+  width: 120px;               /* Explicit fixed width */
+  border-radius: 9999px;     /* Fully rounded */
+  object-fit: contain;       /* Prevent distortion */
+  border: 1px solid #d1d5db; /* Tailwind gray-300 */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: white;   /* Optional: White background for visibility */
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
