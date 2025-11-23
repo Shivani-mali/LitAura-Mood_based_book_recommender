@@ -3,98 +3,168 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LitAura - By Gen-G Developers</title>
+  <title>Shivani Mali - Litaura</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 </head>
 
-<body class="bg-gradient-to-br from-cyan-100 via-blue-100 to-purple-100 text-gray-800 font-sans">
+<body class="bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 text-gray-800 font-sans">
 
   <!-- Navbar -->
   <header class="bg-white shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-purple-700">📚 LitAura</h1>
-      <nav class="space-x-6" aria-label="Main Navigation">
-        <a href="index.html" class="hover:text-purple-600 font-medium"><i class="fa-regular fa-house fs-4"></i></a>
-        <a href="#about-litaura" class="hover:text-purple-600 font-medium"><i class="fa-solid fa-book fs-4"></i></a>
-        <a href="#team" class="hover:text-purple-600 font-medium"><i class="fa-regular fa-circle-user fs-4"></i></a>
-        <a href="#Feedback" class="hover:text-purple-600 font-medium"><i class="fa-regular fa-comment fs-4"></i></a>
+      <h1 class="text-2xl font-bold text-purple-700">Litaura</h1>
+      <nav class="space-x-6">
+        <a href="index.html" class="hover:text-purple-600 font-medium">Home</a>
+        <a href="#about-litaura" class="hover:text-purple-600 font-medium">About_Litaura</a>
+        <a href="#creator" class="hover:text-purple-600 font-medium">Creator</a>
+        <a href="#projects" class="hover:text-purple-600 font-medium">Projects</a>
+        <a href="#Feedback" class="hover:text-purple-600 font-medium">Feedback</a>
       </nav>
     </div>
   </header>
 
-  <!-- About Litaura Section -->
-  <section id="about-litaura" class="py-20 bg-gradient-to-b from-purple-100 to-white px-6">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-5xl font-bold text-purple-700 mb-6 text-center">📚 About LitAura</h2>
-      <p class="text-3xl font-bold text-purple-700 mb-6 text-center">"A Book Recommender"</p>
-      <p class="text-xl text-gray-700 font-medium mb-4 leading-relaxed text-justify">
+  <!-- 1. About Litaura Section -->
+  <section id="about-litaura" class="py-20 bg-gradient-to-b from-purple-100 to-white text-center px-6">
+    <div class="text-center mb-10">
+      <h2 class="text-5xl font-bold text-purple-700 mb-6">📚 About Litaura</h2>
+      <p class="text-5xl font-bold text-purple-700 mb-6"> "A Book Recommender"</p>
+      <p class="text-xl text-gray-700 font-medium mb-4 leading-relaxed">
         <span class="font-semibold text-purple-800">LitAura</span> is a mood-based book recommender web app
         that helps users discover the perfect book based on how they’re feeling.
         It’s a creative blend of technology and emotional intelligence.
       </p>
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed text-justify">
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
         By using <strong>Sentiment Analysis</strong>, LitAura understands user moods like happy, calm, or thoughtful
         and then fetches relevant books using the <strong>Google Books API</strong>. Whether you’re seeking inspiration
         or comfort, LitAura gives you book suggestions that connect to your emotional state.
       </p>
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed text-justify">
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
         It’s not just a tool — it’s a personalized reading companion made to make book discovery smoother,
         smarter, and more meaningful.
       </p>
-      <div class="my-6 text-center">
+      <div class="my-6">
         <p class="inline-block px-4 py-2 bg-purple-200 text-purple-800 font-semibold rounded-full shadow">
           🛠️ Built with HTML, Tailwind CSS, JavaScript, Sentiment.js & Google Books API
         </p>
       </div>
-      <p class="text-lg text-gray-600 text-justify">
+      <p class="text-lg text-gray-600">
         From the mood you type to the books you save — every part of LitAura is designed with purpose and
         passion. Let your mood pick your next favorite read. 💫
       </p>
     </div>
   </section>
 
-  <!-- About the Team -->
-  <section id="team" class="py-16 bg-purple-50">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold text-purple-700 mb-6">👩‍💻 About the Team</h2>
-      <p class="text-lg mb-4 text-justify">
-        We are <strong>Gen-G Developers</strong> — a passionate student team dedicated to building innovative digital solutions.  
-        LitAura is one of our flagship projects where we blended creativity, technology, and a love for books.
-      </p>
-      <p class="text-lg mb-4 text-justify">
-        Our niche is <strong>AI-powered web applications</strong>. We focus on projects that combine usability with intelligence, making life simpler and smarter.  
-        LitAura reflects our mission: <em>to use technology for meaningful everyday experiences.</em>
-      </p>
-      <p class="text-lg mb-6 text-justify">
-        By collaborating, we explored new technologies, practiced teamwork, and transformed an idea into reality.  
-        This project symbolizes our belief in <strong>learning by creating</strong>.
-      </p>
-      <div class="text-center mt-10">
-        <a href="index.html" 
-           class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform transition duration-300 ease-in-out">
-          🚀 Explore Our Work
-        </a>
+
+  <!-- 2. About the Project Creator -->
+  <section id="creator" class="py-16 bg-purple-50">
+    <div class="max-w-6xl mx-auto px-6 md:flex gap-10 items-start">
+      <div class="md:w-1/3 flex justify-center mb-10 md:mb-0">
+        <img src="img/about.png" alt="Shivani Mali"
+          class="w-64 h-64 rounded-lg shadow-lg border-4 border-white object-cover">
+      </div>
+      <div class="md:w-2/3">
+        <h2 class="text-4xl font-bold text-purple-700 mb-4">About the Project
+          Creator</h2>
+        <p class="text-lg mb-4">
+          I'm <strong>Shivani Mali</strong>, a 2nd-year Computer Science
+          student at <strong>Sanjay Ghodawat Institute</strong> Atigre, Kolhapur.
+          I am a passionate learner and I learned about front-end development, Prompt Engineering, and AI. I specialize
+          in HTML, CSS, JavaScript,
+          Python, and Django.
+        </p>
+        <p class="text-lg mb-4">
+          I serve as Magazine Secretary at Sanjay Ghodawat Institute and a
+          Tech Enthusiast. also I love to explore new technologies and also
+          I Love Books and reading so thats why I created Litaura.
+          Through Litaura, I aim to turn my curiosity into real contributions.
+        </p>
+        <div class="flex flex-wrap gap-4 mt-6">
+          <a href="mailto:shivanimali339@gmail.com"
+            class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition">Email
+            Me</a>
+          <a href="https://www.linkedin.com/in/shivani-mali-64083929a" target="_blank"
+            class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">LinkedIn</a>
+          <a href="https://github.com/Shivani-mali?tab=repositories" target="_blank"
+            class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-900 transition">GitHub</a>
+          <a href="https://codepen.io/shiv-m/pens/showcase" target="_blank"
+            class="bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700 transition">CodePen</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Feedback Form -->
+  <!-- 3. Projects -->
+  <section id="projects" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-purple-700 mb-10">Projects</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="bg-purple-100 p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">My Static Blog</h3>
+          <p class="text-sm mb-4">A clean and elegant blog layout using HTML
+            and CSS.</p>
+          <a href="https://codepen.io/shiv-m/pen/xbxwLyX" target="_blank"
+            class="text-purple-700 font-medium hover:underline">View on
+            CodePen</a>
+        </div>
+
+        <div class="bg-purple-100 p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">To-Do List</h3>
+          <p class="text-sm mb-4">A functional to-do list web app using
+            JavaScript.</p>
+          <a href="https://codepen.io/shiv-m/pen/YzmRmrr" target="_blank"
+            class="text-purple-700 font-medium hover:underline">View on
+            CodePen</a>
+        </div>
+
+        <div class="bg-purple-100 p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Voice Cloning with A.I</h3>
+          <p class="text-sm mb-4">A conceptual UI for voice cloning using AI
+            frameworks.</p>
+          <a href="https://codepen.io/shiv-m/pen/ExBpyRq" target="_blank"
+            class="text-purple-700 font-medium hover:underline">View on
+            CodePen</a>
+        </div>
+
+        <div class="bg-purple-100 p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">A Nature Beauty</h3>
+          <p class="text-sm mb-4">A visually rich layout that captures
+            nature’s elegance.</p>
+          <a href="https://codepen.io/shiv-m/pen/gONLBdx" target="_blank"
+            class="text-purple-700 font-medium hover:underline">View on
+            CodePen</a>
+        </div>
+
+        <div class="bg-purple-50 p-6 rounded-lg shadow hover:shadow-lg transition col-span-full">
+          <h3 class="text-xl font-semibold mb-2">More Projects on GitHub</h3>
+          <p class="text-sm mb-4">Explore my GitHub repositories for
+            additional projects and code contributions.</p>
+          <a href="https://github.com/Shivani-mali?tab=repositories" target="_blank"
+            class="text-purple-700 font-medium hover:underline">Visit
+            GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact with Embedded Google Form -->
   <section id="Feedback" class="py-16 bg-gradient-to-r from-purple-100 to-indigo-100">
     <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold text-purple-700 mb-6">📝 Give Feedback</h2>
-      <p class="text-lg text-gray-700 mb-8">We’d love your thoughts and suggestions. Please fill out the form below 👇</p>
+      <h2 class="text-3xl font-bold text-purple-700 mb-6">Contact Me</h2>
+      <p class="text-3xl font-bold text-purple-700 mb-6">Give Your Feedback</p>
+      <p class="mb-8 text-gray-700">Want to collaborate or ask something? Fill out the form below 👇</p>
       <div class="rounded-xl overflow-hidden shadow-lg">
         <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSdJvW6mASMmY2BbhEVhjZ_Hh1KjHyxJ6443erPwpOrw3bWqIQ/viewform?embedded=true"
-          width="100%" height="832" style="border:0;">
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfwI4SCgEuk_-pELGFu6PakNgQFOzJWoJWlOUAH8UixMIkkVg/viewform?embedded=true"
+          width="100%" height="720" frameborder="0" marginheight="0" marginwidth="0">
           Loading…
         </iframe>
         <div class="mt-6">
-          <p class="text-purple-700 font-semibold text-lg">✅ Once submitted, your response will be recorded successfully.</p>
+          <p class="text-purple-700 font-semibold text-lg">📩 Once submitted, your response will be recorded
+            successfully.</p>
           <a href="index.html"
-            class="mt-3 inline-block bg-purple-600 text-white px-4 py-2 rounded hover:bg-pink-600 transition">Back to Home</a>
+            class="mt-3 inline-block bg-purple-600 text-white px-4 py-2 rounded hover:bg-pink-600 transition">Back to
+            Home</a>
         </div>
       </div>
     </div>
@@ -102,8 +172,19 @@
 
   <!-- Footer -->
   <footer class="bg-white text-center py-6 shadow-inner">
-    <p class="text-gray-600 text-sm">&copy; 2025 Gen-G Developers. All rights reserved.</p>
+    <p class="text-gray-600 text-sm">&copy; 2025 Shivani Mali. All rights reserved.</p>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
+
+</html>
+
+<!-- JavaScript -->
+<script>
+  function clearFavourites() {
+    alert("Favourites cleared! (Just a simulated feature 😊)");
+  }
+</script>
+
+</body>
+
 </html>
